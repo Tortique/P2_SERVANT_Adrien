@@ -5,13 +5,11 @@ import java.io.IOException;
 import java.util.*;
 
 public class ProcessOut {
-
     /**
      * Properties
      */
     private ISymptomReader reader;
     private FileWriter writer;
-
     /**
      * Constructor
      *
@@ -22,7 +20,6 @@ public class ProcessOut {
         this.reader = reader;
         this.writer = writer;
     }
-
     /**
      * Transform the list to a HashSet to keep just one copy of each symptoms
      * Transform it to list for sort alphabetically
@@ -30,13 +27,12 @@ public class ProcessOut {
      * @for each element of the list : write in output file his name and his occurrences
      */
     public void ProcessOut() throws IOException {
-        Set<String> test = new HashSet<>(reader.GetSymptoms());
-        List<String> unique = new ArrayList<>(test);
-        Collections.sort(unique);
-        for (String elem : unique) {
+        Set<String> symptoms = new HashSet<>(reader.GetSymptoms());
+        List<String> uniques = new ArrayList<>(symptoms);
+        Collections.sort(uniques);
+        for (String elem : uniques) {
             writer.write(elem + " " + Collections.frequency(reader.GetSymptoms(), elem) + "\n");
         }
-        writer.close();
     }
 
 }
