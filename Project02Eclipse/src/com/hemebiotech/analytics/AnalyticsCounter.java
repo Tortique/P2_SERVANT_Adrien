@@ -8,7 +8,7 @@ public class AnalyticsCounter {
         /**
          * Construct a list with input file symptoms.txt
          */
-        ISymptomReader reader = new ReadSymptomDataFromFile("Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application\\Project02Eclipse\\symptoms.txt");
+        ISymptomReader reader = new ReadSymptomDataFromFile("C:\\Users\\adrie\\Desktop\\OC-Projet\\P2_SERVANT_Adrien\\Project02Eclipse\\symptoms.txt");
         /**
          * Construct an output file for result
          */
