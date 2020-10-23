@@ -33,6 +33,6 @@ public class ProcessOut {
         for (String elem : uniques) {
             writer.write(elem + " " + Collections.frequency(reader.GetSymptoms(), elem) + "\n");
         }
+        writer.close();
     }
-
 }
