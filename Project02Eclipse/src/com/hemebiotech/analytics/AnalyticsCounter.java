@@ -11,7 +11,7 @@ public class AnalyticsCounter {
      */
     public static void main(String args[]) throws Exception {
         ISymptomReader reader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
-        FileWriter writer = new FileWriter("result.out");
+        FileWriter writer = new FileWriter("results.out");
         ProcessOut result = new ProcessOut(reader, writer);
         result.ProcessOut();
 
